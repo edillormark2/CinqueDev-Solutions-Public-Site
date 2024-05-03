@@ -1,0 +1,32 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  color: #293240;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 6px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
