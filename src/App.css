@@ -2,19 +2,22 @@
 @import url('https://fonts.cdnfonts.com/css/ds-digital');
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(189, 189, 189);
   border-radius: 25px;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
+.navbar {
+  z-index: 10000;
+}
+
 .form-control {
   display: block;
-  width: 100%;
   color: #293240;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -26,7 +29,26 @@
 }
 
 .form-control:focus {
+  border: 1px solid #000000;
+  outline: 0;
+}
+
+.form-control-1 {
+  display: block;
+  width: 100%;
+  color: #293240;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 6px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control-1:focus {
   border-color: #3498db;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
 }
+
+
