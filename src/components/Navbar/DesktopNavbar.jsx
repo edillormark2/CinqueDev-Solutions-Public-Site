@@ -40,7 +40,6 @@ const DesktopNavbar = () => {
 
   useEffect(
     () => {
-      // Update currentPath whenever the URL changes
       setCurrentPath(location.pathname);
     },
     [location.pathname]

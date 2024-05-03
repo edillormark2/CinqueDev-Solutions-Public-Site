@@ -11,7 +11,6 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
 
   useEffect(
     () => {
-      // Update currentPath whenever the URL changes
       setCurrentPath(location.pathname);
     },
     [location.pathname]
@@ -19,8 +18,8 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
 
   const handleNavLinkClick = link => {
     setCurrentPath(link);
-    navigate(link); // Navigate to the clicked link
-    setShowMenu(false); // Close the menu after clicking a link
+    navigate(link); 
+    setShowMenu(false); 
   };
 
   return (
@@ -54,7 +53,7 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
         <Link to="/registration">
           <div
             className="flex justify-center mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-4 py-2 rounded-full text-white hover:opacity-80"
-            onClick={() => setShowMenu(false)} // Close the menu when clicking the "Register" button
+            onClick={() => setShowMenu(false)} 
           >
             Consult now
           </div>
