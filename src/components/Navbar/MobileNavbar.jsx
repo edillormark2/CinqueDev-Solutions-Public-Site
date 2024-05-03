@@ -31,11 +31,7 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
     >
       <div className="card">
         <div className="flex items-center justify-center w-full">
-          <img
-            src={simplifiedlogo}
-            alt="logo"
-            className="h-16 object-cover"
-          />
+          <img src={simplifiedlogo} alt="logo" className="h-16 object-cover" />
         </div>
         <nav className="mt-12">
           <ul className="space-y-2 text-base">
@@ -57,7 +53,7 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
         </nav>
         <Link to="/registration">
           <div
-            className="flex justify-center mt-10 cursor-pointer bg-blue-500 px-4 py-2 rounded-full text-white hover:opacity-80"
+            className="flex justify-center mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-4 py-2 rounded-full text-white hover:opacity-80"
             onClick={() => setShowMenu(false)} // Close the menu when clicking the "Register" button
           >
             Consult now

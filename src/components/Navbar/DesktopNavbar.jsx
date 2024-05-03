@@ -50,7 +50,7 @@ const DesktopNavbar = () => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       setIsHalfScreen(screenWidth > 750 && screenWidth <= 1080);
-      setIsMobileScreen(screenWidth <= 380);
+      setIsMobileScreen(screenWidth <= 100);
     };
 
     handleResize();
@@ -77,7 +77,7 @@ const DesktopNavbar = () => {
   return (
     <div className="relative z-10 shadow-md dark:bg-secondary-dark-bg dark:text-gray-200">
       <div className="container py-4">
-        <div className="flex justify-between items-center w-full md:w-11/12 ml-2 md:ml-20">
+        <div className="flex justify-between items-center  md:w-11/12 ml-2 md:ml-20 mx-auto">
           {/*Logo container*/}
           <div>
             {!isMobileScreen &&
