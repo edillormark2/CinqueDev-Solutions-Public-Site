@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { NavLink, useNavigate, useLocation, Link } from "react-router-dom";
@@ -37,6 +37,25 @@ const DesktopNavbar = () => {
   const [currentPath, setCurrentPath] = useState("/");
   const [isHalfScreen, setIsHalfScreen] = useState(false);
   const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const menuDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = event => {
+      if (
+        menuDropdownRef.current &&
+        !menuDropdownRef.current.contains(event.target) &&
+        !event.target.closest(".menu-dropdown-button")
+      ) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   useEffect(
     () => {
@@ -102,10 +121,10 @@ const DesktopNavbar = () => {
                   <NavLink
                     to={link}
                     onClick={() => handleNavLinkClick(link)}
-                    className={`text-sm sm:text-base hover:text-primary py-2 hover:border-b-2 hover:border-primary ${currentPath ===
+                    className={`text-sm sm:text-base py-2 hover:border-b-2  ${currentPath ===
                     link
                       ? "text-primary border-b-2 border-primary"
-                      : ""}`}
+                      : "hover:border-gray-300"}`}
                   >
                     {name}
                   </NavLink>
@@ -118,7 +137,7 @@ const DesktopNavbar = () => {
               className={`flex items-center cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
             >
               Consult now
-              <MdCallMade className="ml-2"/>
+              <MdCallMade className="ml-2" />
             </div>
           </div>
 
@@ -139,7 +158,11 @@ const DesktopNavbar = () => {
           </div>
         </div>
       </div>
-      <MobileNavbar showMenu={showMenu} setShowMenu={setShowMenu} />
+      <MobileNavbar
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+        menuDropdownRef={menuDropdownRef}
+      />
     </div>
   );
 };
