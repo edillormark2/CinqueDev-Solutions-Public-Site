@@ -1,6 +1,10 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 @import url('https://fonts.cdnfonts.com/css/ds-digital');
 
+/* *{
+  outline: navy 1px solid;
+} */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
