@@ -104,12 +104,13 @@ const DesktopNavbar = () => {
                   ? <img
                       src={simplifiedlogo}
                       alt="logo"
-                      className="w-auto h-12 object-cover "
+                      className="w-auto h-12 object-cover"
                     />
                   : <img
                       src={headerlogo}
                       alt="logo"
-                      className="w-auto h-12 object-cover"
+                      className="w-auto h-12 object-cover hover:cursor-pointer"
+                      onClick={() => navigate(Navlinks[0].link)}
                     />}
               </div>}
           </div>
