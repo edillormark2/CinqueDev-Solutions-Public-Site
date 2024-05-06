@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   mode: "jit",
   content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
   darkMode: "class",
