@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const About = () => {
+  const [videoHeight, setVideoHeight] = useState(450);
+  useEffect(() => {
+    const handleResize = () => {
+      setVideoHeight(window.innerWidth < 640 ? 350 : 450);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="my-8 md:my-16 mx-6 md:mx-10 lg:mx-20 xl:mx-36">
-      <div className="flex flex-col xl:flex-row justify-center mx-auto">
-        <div className="w-full xl:w-1/2 mr-0 md:mr-24">
+    <div className="my-8 md:my-16 mx-6 md:mx-10 lg:mx-16 xl:mx-20 2xl:mx-36">
+      <div className="flex flex-col xl:flex-row justify-center">
+        <div className="w-full xl:w-1/2 mr-0 md:mr-20">
           <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mt-10">
             Discover
           </h1>
-          <h1 className="text-2xl md:text-5xl font-bold text-gray-800 hover:text-primary">
+          <h1 className="text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-gray-800 hover:text-primary">
             CinqueDev Solutions
           </h1>
           <div className="mt-8">
@@ -31,17 +44,16 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-full xl:w-1/2">
-          <div className="w-full">
-            <iframe
-              className="drop-shadow-xl rounded-xl w-full h-80 md:h-96 mt-20 "
-              src="https://www.youtube.com/embed/TkrqfPkvy88?si=3GHywfO4g3vqUWu3"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            />
-          </div>
+        <div className="w-full xl:w-2/3">
+          <iframe
+            className="drop-shadow-xl rounded-xl w-full aspect-video mt-16 md:mt-24"
+            height={videoHeight}
+            src="https://www.youtube.com/embed/TkrqfPkvy88?si=3GHywfO4g3vqUWu3"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
         </div>
       </div>
     </div>
