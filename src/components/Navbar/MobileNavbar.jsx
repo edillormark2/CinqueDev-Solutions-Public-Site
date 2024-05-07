@@ -45,7 +45,7 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
                   ? "bg-gray-200 dark:text-black"
                   : ""}`}
               >
-                <NavLink to={link} className="p-3 inline-block">
+                <NavLink to={link} className="p-2 inline-block">
                   {name}
                 </NavLink>
               </li>
@@ -54,7 +54,7 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
         </nav>
         <Link to="/book-consultation">
           <div
-            className="flex items-center justify-center mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-4 py-2 rounded-full text-white hover:opacity-80"
+            className="flex items-center justify-center  mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-0 md:px-4 py-2 rounded-full text-white hover:opacity-80"
             onClick={() => setShowMenu(false)}
           >
             Consult now
