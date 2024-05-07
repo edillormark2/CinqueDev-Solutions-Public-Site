@@ -11,8 +11,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
-
-
 const Contact = () => {
   const countries = countryList().getData();
 
