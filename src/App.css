@@ -41,6 +41,7 @@
   display: block;
   width: 100%;
   color: #293240;
+  border-color: #acacac;
   background-clip: padding-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -55,3 +56,20 @@
   box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
 }
 
+.box {
+  display: block;
+  width: 100%;
+  color: #293240;
+  border-color: #acacac;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 6px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.box:focus-within {
+  border-color: #3498db;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
