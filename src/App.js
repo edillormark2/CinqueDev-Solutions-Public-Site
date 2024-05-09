@@ -18,7 +18,7 @@ const App = () => {
           <div className="fixed bg-main-bg dark:bg-main-dark-bg navbar w-full">
             <DesktopNavbar />
           </div>
-          <main className="flex-grow bg-gray-100 dark:bg-main-dark-bg mt-12 sm:mt-12 p-2">
+          <main className="flex-grow bg-gray-100 dark:bg-main-dark-bg mt-12 sm:mt-12">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />

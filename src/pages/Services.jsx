@@ -6,6 +6,7 @@ import security from "../assets/security-icon.png";
 import performance from "../assets/performance.png";
 import adaptability from "../assets/adaptability.png";
 import { FaCheck } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 const Services = () => {
   return (
@@ -158,7 +159,7 @@ const Services = () => {
               </div>
             </div>
             <div className="relative flex flex-row items-center  w-full p-0 md:p-2 gap-8 mx-0 md:mx-4 my-6 sm:my-10 md:my-8 z-10">
-            <div className="absolute w-0.5 bg-gray-300 h-40 lg:h-52 top-10 left-10 md:left-12" />
+              <div className="absolute w-0.5 bg-gray-300 h-40 lg:h-52 top-10 left-10 md:left-12" />
               <div className="flex p-2 bg-primary rounded-full min-w-20 max-w-20 h-20 items-center justify-center drop-shadow-lg">
                 <img src={performance} className="object-cover w-8 h-8" />
               </div>
@@ -172,7 +173,7 @@ const Services = () => {
               </div>
             </div>
             <div className="relative flex flex-row items-center  w-full p-0 md:p-2 gap-8 mx-0 md:mx-4 my-10 sm:my-10 md:my-8 z-10">
-            <div className="absolute w-0.5 bg-gray-300 h-10 md:h-20 bottom-14 left-10 md:left-12" />
+              <div className="absolute w-0.5 bg-gray-300 h-10 md:h-20 bottom-14 left-10 md:left-12" />
               <div className="flex p-2 bg-primary rounded-full min-w-20 max-w-20 h-20 items-center justify-center drop-shadow-lg">
                 <img src={adaptability} className="object-cover w-10 h-10" />
               </div>
@@ -191,6 +192,8 @@ const Services = () => {
           </div>
         </div>
       </div>
+      {/*Footer Section */}
+      <Footer />
     </div>
   );
 };

@@ -56,6 +56,14 @@ const About = () => {
           />
         </div>
       </div>
+      <div className="w-full flex justify-center mt-16">
+        <div>
+          <div className="text-4xl font-semibold text-gray-800">
+            Meet our dedicated team
+          </div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };
