@@ -10,8 +10,8 @@ function Footer() {
     <div className="bg-white  w-full flex md:flex-row flex-col justify-between items-start py-8  lg:py-16 px-8 lg:px-40 border border-gray-300">
       <div className="w-full md:w-1/2 md:justify-center">
         <ul>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-2 bg-gray-200 rounded-xl w-20 my-4 cursor-pointer hover:shadow-primary">
+          <div className="flex items-center gap-4 mb-4 ">
+            <div className="p-2 bg-gray-200 rounded-xl min-w-20 max-w-24 my-4 cursor-pointer shadow-xl hover:shadow-primary">
               <img
                 src={simplifiedlogo}
                 alt="logo"
@@ -25,7 +25,7 @@ function Footer() {
           </div>
           <Divider />
           <div className="flex gap-6 pb-5 mt-4">
-            <div className=" p-2 drop-shadow-xl rounded-full bg-gray-200 hover:bg-primary  hover:text-white cursor-pointer">
+            <div className=" p-2 drop-shadow-lg rounded-full bg-gray-200 hover:bg-primary  hover:text-white cursor-pointer">
               <FaFacebook className="text-2xl" />
             </div>
             <div className="  p-2 drop-shadow-lg rounded-full bg-gray-200  hover:bg-primary  hover:text-white cursor-pointer">
@@ -41,7 +41,7 @@ function Footer() {
         </ul>
       </div>
 
-      <div className="flex justify-end gap-20">
+      <div className="flex justify-end gap-8 lg:gap-10">
         <div>
           <ul className="p-4">
             <p className="text-gray-800  font-bold text-md  md:text-xl pb-4">

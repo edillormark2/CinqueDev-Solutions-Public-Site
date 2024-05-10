@@ -63,7 +63,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="p-2  rounded-full text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
+          <div className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
             Select Plan
           </div>
         </div>
@@ -113,11 +113,11 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row m-4 gap-4 ">
-            <div className="p-2 w-full rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
+          <div className="flex flex-col md:flex-row m-4 gap-2 xl:gap-4 ">
+            <div className="p-2 w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center ">
               Select Plan
             </div>
-            <div className="p-2 w-full rounded-full text-black border border-gray-300 flex justify-center  cursor-pointer bg-gray-200 hover:bg-gray-300">
+            <div className="p-2 w-full text-sm text-center font-semibold rounded-full text-gray-600 border border-gray-300 flex justify-center  cursor-pointer bg-gray-200 hover:bg-gray-300">
               View Our Softwares
             </div>
           </div>
