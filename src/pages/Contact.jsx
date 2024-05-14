@@ -1,15 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Divider, Typography } from "@mui/joy";
+import { Divider } from "@mui/joy";
 import countryList from "react-select-country-list";
-import contactUsImage from "../assets/5124558.svg";
 import getintouch from "../assets/get-in-touch.png";
 
-import { FiMail } from "react-icons/fi";
-import { FaRegBuilding } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { SiX } from "react-icons/si";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -91,7 +84,7 @@ const Contact = () => {
             />
             <div className="items-center mx-auto md:mx-0 mt-8">
               <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-                <div className="flex flex-row gap-4 items-center hover:bg-gray-200 w-full p-2 cursor-pointer">
+                <div className="flex flex-row gap-4 items-center hover:bg-gray-200 w-full p-2 cursor-pointer rounded-md">
                   <div className="p-2 bg-blue-100 rounded-full ">
                     <MdOutlineMailOutline size={28} className="text-blue-500" />
                   </div>
@@ -100,7 +93,7 @@ const Contact = () => {
                     <p className="text-gray-500">sales@cinquedev.com</p>
                   </div>
                 </div>
-                <div className="flex flex-row gap-4 items-center hover:bg-gray-200 w-full p-2 cursor-pointer">
+                <div className="flex flex-row gap-4 items-center hover:bg-gray-200 w-full p-2 cursor-pointer rounded-md">
                   <div className="p-2 bg-blue-100 rounded-full ">
                     <FiPhone size={28} className="text-blue-500" />
                   </div>
@@ -110,7 +103,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row gap-4 items-center mt-8 hover:bg-gray-200 w-full md:w-1/2 p-2 cursor-pointer">
+              <div className="flex flex-row gap-4 items-center mt-8 hover:bg-gray-200 w-full md:w-1/2 p-2 cursor-pointer rounded-md">
                 <div className="p-2 bg-blue-100 rounded-full ">
                   <PiBuildingsBold size={28} className="text-blue-500" />
                 </div>

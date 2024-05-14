@@ -5,6 +5,10 @@
   outline: navy 1px solid;
 } */
 
+*{
+  @apply duration-300;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
