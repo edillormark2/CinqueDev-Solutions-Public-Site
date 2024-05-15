@@ -1,17 +1,72 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import homepage from "../assets/homepage.png";
 import codingillu from "../assets/codingillu.png";
 import devteamillu from "../assets/devteamillu.png";
+import website from "../assets/website01.png";
+import webapp from "../assets/webapp.png";
+import mobileapp from "../assets/mobileapp.png";
+import desktopapp from "../assets/desktopapp.png";
 import Footer from "../components/Footer";
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaGitAlt
+} from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiPhp, SiFirebase, SiMongodb } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { IoLogoFigma } from "react-icons/io5";
 
 const Home = () => {
   const secondPartRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [shouldPause, setShouldPause] = useState(false);
 
   const handleReadMoreClick = () => {
     if (secondPartRef.current) {
       secondPartRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const tools = [
+    { icon: <FaReact size={40} className="mx-auto" />, name: "React JS" },
+    { icon: <FaNodeJs size={40} className="mx-auto" />, name: "Node JS" },
+    { icon: <FaGitAlt size={40} className="mx-auto" />, name: "Git" },
+    {
+      icon: <RiTailwindCssFill size={40} className="mx-auto" />,
+      name: "Tailwind"
+    },
+    { icon: <SiPhp size={40} className="mx-auto" />, name: "PHP" },
+    { icon: <SiFirebase size={40} className="mx-auto" />, name: "Firebase" },
+    { icon: <SiMongodb size={40} className="mx-auto" />, name: "MongoDB" },
+    { icon: <GrMysql size={40} className="mx-auto" />, name: "MySQL" },
+    { icon: <IoLogoFigma size={40} className="mx-auto" />, name: "Figma" },
+    { icon: <FaHtml5 size={40} className="mx-auto" />, name: "HTML5" },
+    { icon: <FaCss3Alt size={40} className="mx-auto" />, name: "CSS3" },
+    { icon: <FaJs size={40} className="mx-auto" />, name: "JavaScript" }
+  ];
+  useEffect(
+    () => {
+      let timer;
+      if (isHovered) {
+        timer = setTimeout(() => setShouldPause(true), 1000);
+      } else {
+        setShouldPause(false);
+        if (timer) {
+          clearTimeout(timer);
+        }
+      }
+      return () => {
+        if (timer) {
+          clearTimeout(timer);
+        }
+      };
+    },
+    [isHovered]
+  );
 
   return (
     <div>
@@ -48,9 +103,10 @@ const Home = () => {
             />
           </div>
         </div>
+        <div ref={secondPartRef} />
       </div>
       {/* Home page second part */}
-      <div ref={secondPartRef}>
+      <div>
         <div className="my-0 lg:my-20 mx-2 lg:mx-20">
           <div className="p-4 lg:p-8 xl:p-14 2xl:p-20 flex flex-col-reverse lg:flex-row gap-10">
             <div className="w-full lg:w-1/2 flex justify-center">
@@ -101,6 +157,113 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Home page third part */}
+      <div className="mx-4 md:mx-10 mt-20 mb-60">
+        <div className="mx-0 md:mx-10 mt-10 text-3xl xl:text-4xl font-bold text-center">
+          Our software solution services
+        </div>
+        <div className="flex justify-center mt-2 mb-2">
+          <div className="h-0.5 w-24 mx-auto lg:mx-0 bg-gradient-to-r from-cyan-300 to-blue-500 " />
+        </div>
+        <div className="mx-auto w-full md:w-1/2 text-base text-center mb-16 text-gray-600">
+          We help businesses to swiftly adapt to change and scale rapidly to
+          meet the evolving demands of the market, ensuring they maintain a
+          competitive edge.
+        </div>
+        <div className="flex flex-col lg:flex-row mx-2 xl:mx-20 gap-4 xl:gap-8">
+          <div className="flex flex-col md:flex-row gap-4 xl:gap-8 ">
+            <div className="bg-white p-6 drop-shadow-lg rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-95">
+              <div className="my-2">
+                <img src={website} className="w-16 h-16 bject-contain" />
+              </div>
+              <p className="text-base font-bold">Website Development</p>
+              <p className="text-sm my-2 text-slate-500">
+                Create stunning, responsive websites tailored to your business
+                needs. Engage your audience with a seamless, user-friendly
+                experience on any device.
+              </p>
+            </div>
+            <div className="bg-white p-6 drop-shadow-lg rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-95">
+              <div className="my-2">
+                <img src={webapp} className="w-16 h-16 bject-contain" />
+              </div>
+              <p className="text-base font-bold">Web App Development</p>
+              <p className="text-sm my-2 text-slate-500">
+                Develop powerful, scalable web applications that streamline
+                operations and enhance productivity. Custom solutions for your
+                unique business requirements.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 xl:gap-8">
+            <div className="bg-white p-6 drop-shadow-lg rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-95">
+              <div className="my-4">
+                <img src={mobileapp} className="w-16 h-16 bject-contain" />
+              </div>
+              <p className="text-base font-bold">Mobile App Development</p>
+              <p className="text-sm my-2 text-slate-500">
+                Build intuitive, high-performance mobile apps for iOS and
+                Android. Deliver a seamless user experience and stay ahead in
+                the mobile-first world.
+              </p>
+            </div>
+            <div className="bg-white p-6 drop-shadow-lg rounded-lg cursor-pointer transform transition-transform duration-300 hover:scale-95">
+              <div className="my-2">
+                <img src={desktopapp} className="w-16 h-16 bject-contain" />
+              </div>
+              <p className="text-base font-bold">Desktop App Development</p>
+              <p className="text-sm my-2 text-slate-500">
+                Create robust desktop applications for Windows, macOS, and
+                Linux. Enhance productivity with efficient, user-friendly
+                software tailored to your needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Home page fourth part */}
+      <div className="mx-4 md:mx-10 my-20">
+        <div className="mx-0 md:mx-10 mt-10 text-3xl xl:text-4xl font-bold text-center">
+          The tools and technologies we use
+        </div>
+        <div className="flex justify-center mt-4 mb-16">
+          <div className="h-0.5 w-24 mx-auto lg:mx-0 bg-gradient-to-r from-cyan-300 to-blue-500" />
+        </div>
+        <div
+          className="marquee-container "
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className={`marquee-content ${shouldPause ? "paused" : ""}`}>
+            {tools.map((tool, index) =>
+              <div
+                key={index}
+                className="bg-white rounded-lg drop-shadow-md p-4 m-2 w-40 items-center hover:bg-blue-50 border hover:border-blue-500 cursor-pointer overflow-hidden transform transition-transform hover:scale-110"
+              >
+                {tool.icon}
+                <p className="text-center my-2 font-semibold text-gray-600">
+                  {tool.name}
+                </p>
+              </div>
+            )}
+            {tools.map((tool, index) =>
+              <div
+                key={index + tools.length}
+                className="bg-white rounded-lg drop-shadow-md p-4 m-2 w-40 items-center hover:bg-blue-50 border hover:border-blue-500 cursor-pointer overflow-hidden transform transition-transform hover:scale-110"
+              >
+                {tool.icon}
+                <p className="text-center my-2 font-semibold text-gray-600">
+                  {tool.name}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
