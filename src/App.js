@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import OurSoftwares from "./pages/OurSoftwares";
+import CustomSoftwarePlan from "./pages/CustomSoftwarePlan";
 
 const App = () => {
   return (
@@ -24,6 +25,10 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/services" element={<Services />} />
+              <Route
+                path="/services/custom-software-plan"
+                element={<CustomSoftwarePlan />}
+              />
               <Route
                 path="/services/ready-softwares"
                 element={<OurSoftwares />}

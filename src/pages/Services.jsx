@@ -64,9 +64,11 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
-            Select Plan
-          </div>
+          <Link to="/services/custom-software-plan">
+            <div className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
+              Select Plan
+            </div>
+          </Link>
         </div>
         <div className="flex flex-col p-4 bg-white border hover:border-primary rounded-lg drop-shadow-xl w-full lg:w-2/5 overflow-hidden transform transition-transform hover:scale-105">
           <p className="flex justify-center text-xl md:text-2xl font-bold">

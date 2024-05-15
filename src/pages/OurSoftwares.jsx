@@ -3,7 +3,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import hhrms from "../assets/hhrms-pic.png";
 import lms from "../assets/lms-dashboard.png";
+import todoapp from "../assets/todoapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 const OurSoftwares = () => {
   const [dropdownIndustryOpen, setDropdownIndustryOpen] = useState(false);
@@ -139,7 +141,7 @@ const OurSoftwares = () => {
                     >
                       <button
                         onClick={() => handleSelectServices("All Industries")}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left "
                       >
                         All Services
                       </button>
@@ -213,11 +215,11 @@ const OurSoftwares = () => {
               <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
             </div>
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 ">
             <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
               <img
                 src={hhrms}
-                className="object-cover w-full h-full rounded-xl cursor-pointer"
+                className="object-cover w-full h-full rounded-xl cursor-pointer z-10"
                 alt="Web image"
               />
             </div>
@@ -239,7 +241,7 @@ const OurSoftwares = () => {
               Library Management System (LMS)
             </p>
             <p className="text-justify text-sm md:text-base tracking-wide leading-loose my-2 text-gray-500">
-              a software solution designed to efficiently manage the operations
+              A software solution designed to efficiently manage the operations
               of a library. It encompasses a range of functionalities including
               cataloging and organizing library resources (such as books,
               journals, and multimedia), managing member accounts, tracking
@@ -254,13 +256,52 @@ const OurSoftwares = () => {
                 Desktop App
               </div>
             </div>
-            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-44 text-center group ">
+            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
               View Case Study
               <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col lg:flex-row gap-0 lg:gap-28">
+          <div className="w-full lg:w-2/5 mt-4">
+            <p className="text-2xl font-semibold">To Do List</p>
+            <p className="text-justify text-sm md:text-base tracking-wide leading-loose my-2 text-gray-500">
+              A To-Do List Mobile App/Web App is a productivity tool designed to
+              help users organize tasks, manage priorities, and track progress
+              on various activities. These apps typically allow users to create,
+              edit, and delete tasks, set due dates and reminders, categorize
+              tasks into different lists or projects, and sometimes collaborate
+              with others.
+            </p>
+            <div className="flex gap-4 my-4">
+              <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                Lifestyle
+              </div>
+              <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                Mobile App
+              </div>
+              <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                Web App
+              </div>
+            </div>
+            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+              Visit Case Study
+              <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
+              <img
+                src={todoapp}
+                className="object-cover w-full h-full rounded-xl cursor-pointer"
+                alt="Web image"
+              />
+            </div>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
