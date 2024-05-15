@@ -7,6 +7,7 @@ import performance from "../assets/performance.png";
 import adaptability from "../assets/adaptability.png";
 import { FaCheck } from "react-icons/fa";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -117,9 +118,11 @@ const Services = () => {
             <div className="p-2 w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center ">
               Select Plan
             </div>
-            <div className="p-2 w-full text-sm text-center font-semibold rounded-full text-gray-600 border border-gray-300 flex justify-center  cursor-pointer bg-gray-200 hover:bg-gray-300">
-              View Our Softwares
-            </div>
+            <Link to="/services/ready-softwares">
+              <div className="w-40 p-2  text-sm text-center font-semibold rounded-full text-gray-600 border border-gray-300 flex justify-center  cursor-pointer bg-gray-200 hover:bg-gray-300">
+                View Our Softwares
+              </div>
+            </Link>
           </div>
         </div>
       </div>
