@@ -4,6 +4,7 @@ import aronbnw from "../assets/aron-bnw.png";
 import pardibnws from "../assets/pardii-bnw.png";
 import aldebnw from "../assets/alde-bnw.png";
 import boneobnw from "../assets/boneo-bnw.jpg";
+import goals from "../assets/goals.png";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -26,6 +27,7 @@ const About = () => {
   return (
     <div>
       <div className="my-8 md:my-16 mx-6 md:mx-10 lg:mx-16 xl:mx-20 2xl:mx-36">
+        {/*About page First section */}
         <div className="flex flex-col xl:flex-row justify-center my-20 lg:my-36">
           <div className="w-full xl:w-1/2 mr-0 md:mr-20">
             <h1 className="text-center lg:text-start text-4xl md:text-6xl font-bold text-gray-800 mt-10">
@@ -68,6 +70,7 @@ const About = () => {
           </div>
         </div>
 
+        {/*About page 2nd section */}
         <div className="w-full mt-44">
           <div className="flex flex-col-reverse lg:flex-row my-10 gap-20 mx-8 lg:mx-16">
             <div className="flex justify-center w-full lg:w-2/5">
@@ -197,6 +200,131 @@ const About = () => {
                 </div>
                 <div className="bg-white rounded-full drop-shadow-lg p-3 w-10 cursor-pointer">
                   <MdEmail className="text-blue-500" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*About page 3rd section */}
+        <div className="my-36 mx-20 w-full">
+          <div className="flex justify-center w-full gap-10">
+            <div className="w-2/5">
+              <p className="text-3xl sm:text-5xl font-bold text-gray-800 my-4">
+                How we work?
+              </p>
+              <p className="my-2 text-lg text-slate-500">
+                We have designed a streamlined process to design projects for
+                maximum effectiveness and a smooth workflow.
+              </p>
+              <img src={goals} className="w-5/6 h-auto object-contain" />
+            </div>
+            <div className="w-2/5 mx-8">
+              <div className="relative flex gap-4 mb-16 group">
+                <div className="absolute w-0.5 bg-gray-300 h-36 top-4 left-6" />
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  1
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Plan</p>
+                  <p>
+                    Define the scope and objectives of the project or the
+                    upcoming sprint.
+                  </p>
+                </div>
+              </div>
+              <div className="relative flex gap-4 mb-16  group">
+                <div className="absolute w-0.5 bg-gray-300 h-36 top-4 left-6" />
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  2
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Design</p>
+                  <p>
+                    Create the architecture and design for the features to be
+                    developed.
+                  </p>
+                </div>
+              </div>
+              <div className="relative flex gap-4 mb-16  group">
+                <div className="absolute w-0.5 bg-gray-300 h-36 top-4 left-6" />
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  3
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Develop</p>
+                  <p>
+                    Write the code to implement the planned features and
+                    functionality.
+                  </p>
+                </div>
+              </div>
+              <div className="relative flex gap-4 mb-16  group">
+                <div className="absolute w-0.5 bg-gray-300 h-36 top-4 left-6" />
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  4
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Test</p>
+                  <p>
+                    Verify that the code works as intended and meets the
+                    acceptance criteria.
+                  </p>
+                </div>
+              </div>
+              <div className="relative flex gap-4 mb-16  group">
+                <div className="absolute w-0.5 bg-gray-300 h-36 top-4 left-6" />
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  5
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Deploy</p>
+                  <p>
+                    Release the developed and tested features to a production or
+                    staging environment.
+                  </p>
+                </div>
+              </div>
+              <div className=" flex gap-4 mb-16  group">
+                <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
+                  6
+                </div>
+                <div className="mx-8 text-slate-400 group-hover:text-slate-700">
+                  <p className="font-semibold text-xl">Review</p>
+                  <p>
+                    Assess the completed work and identify areas for
+                    improvement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*About page 4th section */}
+        <div className="my-36 mx-16">
+          <div className="flex justify-center  my-6 rounded-2xl p-6 bg-gradient-to-l from-cyan-300 to-blue-500 ">
+            <div className="w-full mx-60">
+              <p className="text-white text-5xl font-bold text-center">
+                Our Mission
+              </p>
+              <div className="flex justify-center">
+                <div className="h-0.5 w-24 flex mx-auto lg:mx-0 bg-white my-4" />
+              </div>
+              <p className="text-white text-lg my-2 text-center">
+                To offer impactful and transformative solutions that propel
+                businesses forward and enhance the lives of individuals through
+                meaningful innovation.
+              </p>
+              <div className="flex justify-center gap-4 mt-20">
+                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg">
+                  BUILD
+                </div>
+                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg">
+                  INNOVATE
+                </div>
+                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg">
+                  SUCCEED
                 </div>
               </div>
             </div>
