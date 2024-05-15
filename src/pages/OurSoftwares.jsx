@@ -6,6 +6,7 @@ import lms from "../assets/lms-dashboard.png";
 import todoapp from "../assets/todoapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const OurSoftwares = () => {
   const [dropdownIndustryOpen, setDropdownIndustryOpen] = useState(false);
@@ -210,10 +211,12 @@ const OurSoftwares = () => {
                 Web App
               </div>
             </div>
-            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
-              Visit Website
-              <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
-            </div>
+            <Link target="blank" to="https://bcp-hhrms.onrender.com/">
+              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
+                Visit Website
+                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+              </div>
+            </Link>
           </div>
           <div className="w-full lg:w-1/2 ">
             <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
@@ -256,10 +259,15 @@ const OurSoftwares = () => {
                 Desktop App
               </div>
             </div>
-            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
-              View Case Study
-              <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
-            </div>
+            <Link
+              target="blank"
+              to="https://github.com/edillormark2/Library-Management-System"
+            >
+              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                View Case Study
+                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -285,10 +293,15 @@ const OurSoftwares = () => {
                 Web App
               </div>
             </div>
-            <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
-              Visit Case Study
-              <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
-            </div>
+            <Link
+              target="blank"
+              to="https://github.com/edillormark2/Todo-List-App"
+            >
+              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                Visit Case Study
+                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+              </div>
+            </Link>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">

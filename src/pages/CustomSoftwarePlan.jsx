@@ -68,22 +68,22 @@ const CustomSoftwarePlan = () => {
 
   return (
     <div>
-      <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative">
+      <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative ">
         <div className="absolute top-40 flex w-full">
-          <div className="bg-white drop-shadow-2xl mx-8 lg:mx-36 rounded-xl w-full py-8 px-12">
+          <div className="bg-white drop-shadow-2xl mx-8 lg:mx-36 rounded-xl w-full py-8 px-4 lg:px-12 mb-40">
             <div className="">
-              <p className="text-center text-5xl font-bold">
+              <p className="text-center text-2xl lg:text-5xl font-bold">
                 What would you like to do?
               </p>
               <div className="h-0.5 w-20 flex mx-auto bg-gradient-to-r from-cyan-300 to-blue-500 my-6" />
-              <p className="mx-36 text-lg font-semibold text-gray-500 text-center">
+              <p className="mx-2 lg:mx-36 text-base lg:text-lg font-semibold text-gray-500 text-center">
                 Tell us about your business goals and we will contact you. Feel
                 free to contact us if you need some help, consultation or you
                 have some other question.
               </p>
             </div>
             <div className="mt-10">
-              <div className="flex gap-8">
+              <div className="flex gap-2 lg:gap-8">
                 <div className="w-1/2">
                   <h1 className="mb-1 dark:text-gray-200">Full Name</h1>
                   <input
@@ -101,7 +101,7 @@ const CustomSoftwarePlan = () => {
                   />
                 </div>
               </div>
-              <div className="flex gap-8">
+              <div className="flex gap-2 lg:gap-8">
                 <div className="w-1/2">
                   <h1 className="mb-1 dark:text-gray-200">Country</h1>
                   <div className="mb-5 relative">
@@ -215,14 +215,14 @@ const CustomSoftwarePlan = () => {
 
             <div className="mt-8">
               <h1 className="mb-2 dark:text-gray-200">Expected Services</h1>
-              <div className="flex flex-row gap-4">
-                <label className="w-1/5 inline-flex items-center mt-3">
+              <div className="flex flex-col md:flex-row gap-4 ">
+                <label className="w-full md:w-1/5 inline-flex items-center mt-3">
                   <input type="checkbox" className=" h-5 w-5 text-primary " />
                   <span className="ml-2 text-sm text-gray-700">
                     Website Development
                   </span>
                 </label>
-                <label className="w-1/5 inline-flex items-center mt-3">
+                <label className="w-full md:w-1/5 inline-flex items-center mt-3">
                   <input type="checkbox" className="h-5 w-5 text-primary" />
                   <span className="ml-2 text-sm text-gray-700">
                     Web App Development
@@ -235,14 +235,14 @@ const CustomSoftwarePlan = () => {
                   </span>
                 </label>
               </div>
-              <div className="flex flex-row gap-4">
-                <label className="w-1/5 inline-flex items-center mt-3">
+              <div className="flex flex-col md:flex-row gap-4 mt-2 md:mt-0">
+                <label className="w-full md:w-1/5 inline-flex items-center mt-3">
                   <input type="checkbox" className="h-5 w-5 text-primary" />
                   <span className="ml-2 text-sm text-gray-700">
                     Mobile App Development
                   </span>
                 </label>
-                <label className="w-1/5 inline-flex items-center mt-3">
+                <label className="w-full md:w-1/5 inline-flex items-center mt-3">
                   <input type="checkbox" className="h-5 w-5 text-primary" />
                   <span className="ml-2 text-sm text-gray-700">
                     Desktop App Development
@@ -268,11 +268,7 @@ const CustomSoftwarePlan = () => {
           </div>
         </div>
       </div>
-      <div className="relative h-screen">
-        <div className="w-full absolute -bottom-96 lg:-bottom-60">
-          <Footer />
-        </div>
-      </div>
+      
     </div>
   );
 };
