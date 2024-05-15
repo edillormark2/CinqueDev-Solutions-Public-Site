@@ -137,7 +137,7 @@ const DesktopNavbar = () => {
             <div
               className={`flex items-center cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
             >
-              Consult now
+              Book a call
               <MdCallMade className="ml-2" />
             </div>
           </div>

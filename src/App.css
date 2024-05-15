@@ -73,3 +73,31 @@
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
 }
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-content.paused {
+  animation-play-state: paused;
+}
+
+.marquee-content > div {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
