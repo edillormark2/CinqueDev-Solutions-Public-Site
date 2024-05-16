@@ -23,6 +23,12 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
     setShowMenu(false);
   };
 
+  const handleClick = path => {
+    navigate(path);
+    window.scrollTo({ top: 0 });
+    setShowMenu(false);
+  };
+
   return (
     <div
       ref={menuDropdownRef}
@@ -52,15 +58,14 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
             )}
           </ul>
         </nav>
-        <Link to="/book-consultation">
-          <div
-            className="flex items-center justify-center  mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-0 md:px-4 py-2 rounded-full text-white hover:opacity-80"
-            onClick={() => setShowMenu(false)}
-          >
-            Book a call
-            <MdCallMade className="ml-2" />
-          </div>
-        </Link>
+
+        <div
+          className="flex items-center justify-center  mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-0 md:px-4 py-2 rounded-full text-white hover:opacity-80"
+          onClick={() => handleClick("/schedule-a-free-consultation")}
+        >
+          Book a call
+          <MdCallMade className="ml-2" />
+        </div>
       </div>
     </div>
   );

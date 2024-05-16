@@ -43,9 +43,9 @@ const ScheduleConsultation = () => {
   return (
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative">
-        <div className="absolute top-24 flex ">
-          <div className="flex flex-col lg:flex-row bg-white drop-shadow-2xl mx-4 lg:mx-28 xl:mx-48 rounded-xl w-full py-6 px-3 lg:px-12 mb-40">
-            <div className="w-full lg:w-2/5 mx-4">
+        <div className="absolute top-24 flex mx-2 ">
+          <div className="flex flex-col md:flex-row bg-white drop-shadow-2xl  rounded-xl py-6 px-3 lg:px-12 mb-40">
+            <div className="w-full md:w-2/5 mx-auto">
               <p className="text-3xl font-bold text-center mt-8">
                 Free Consultation
               </p>
@@ -54,10 +54,10 @@ const ScheduleConsultation = () => {
                 A member of our team will discuss with you on how we can build a
                 solution together.
               </p>
-              <div className="flex justify-center mt-10">
+              <div className="flex justify-center mt-2 md:mt-10">
                 <img
                   src={consultation}
-                  className="w-80 h-80 object-contain"
+                  className="w-72 md:w-80 h-72 md:h-80 object-contain"
                   alt="Consultation"
                 />
               </div>
@@ -73,7 +73,7 @@ const ScheduleConsultation = () => {
               </div>
             </div>
             <div className="w-0.5 h-full bg-gray-100" />
-            <div className="w-full lg:w-1/2 mx-auto">
+            <div className="w-full md:w-1/2 mx-auto">
               {showDateTimePicker &&
                 <div className="flex flex-col">
                   <LocalizationProvider dateAdapter={AdapterDayjs}>

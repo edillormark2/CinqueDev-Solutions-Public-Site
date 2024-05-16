@@ -39,6 +39,11 @@ const DesktopNavbar = () => {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
   const menuDropdownRef = useRef(null);
 
+  const handleClick = path => {
+    navigate(path);
+    window.scrollTo({ top: 0 });
+  };
+
   useEffect(() => {
     const handleOutsideClick = event => {
       if (
@@ -135,6 +140,7 @@ const DesktopNavbar = () => {
           </nav>
           <div className="hidden md:block">
             <div
+              onClick={() => handleClick("/schedule-a-free-consultation")}
               className={`flex items-center cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
             >
               Book a call
