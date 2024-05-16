@@ -5,7 +5,7 @@
   outline: navy 1px solid;
 } */
 
-*{
+* {
   @apply duration-300;
 }
 
@@ -21,6 +21,10 @@
 }
 
 .navbar {
+  z-index: 9999;
+}
+
+.toast-container {
   z-index: 10000;
 }
 

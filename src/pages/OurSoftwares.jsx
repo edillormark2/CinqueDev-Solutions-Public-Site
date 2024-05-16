@@ -7,12 +7,15 @@ import todoapp from "../assets/todoapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+import BuySoftwarePopup from "../components/BuySoftwarePopup";
 
 const OurSoftwares = () => {
   const [dropdownIndustryOpen, setDropdownIndustryOpen] = useState(false);
   const [dropdownServicesOpen, setDropdownServicesOpen] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState("");
   const [selectedServices, setSelectedServices] = useState("");
+  const [openCreatePopup, setOpenCreatePopup] = useState(false);
 
   const handleSelectIndustry = size => {
     setSelectedIndustry(size);
@@ -49,6 +52,10 @@ const OurSoftwares = () => {
     };
   }, []);
 
+  const handleOpenPopup = () => {
+    setOpenCreatePopup(true);
+  };
+
   return (
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative">
@@ -57,11 +64,11 @@ const OurSoftwares = () => {
           challenges
         </div>
         <div className="absolute -bottom-20 lg:-bottom-8 flex w-full">
-          <div className="flex flex-col lg:flex-row  bg-white drop-shadow-2xl mx-8 lg:mx-28 rounded-xl w-full">
+          <div className="flex flex-col lg:flex-row  bg-white drop-shadow-2xl mx-8 lg:mx-28 rounded-xl w-full z-50">
             <div className="flex flex-col lg:flex-row w-full">
               <div className="w-full lg:w-1/2 ">
                 <div
-                  className="industry-dropdown-button relative flex justify-between p-4 font-semibold pr-4 cursor-pointer  "
+                  className="industry-dropdown-button relative text-sm lg:text-base flex justify-between p-4 font-semibold pr-4 cursor-pointer  "
                   onClick={() => {
                     setDropdownIndustryOpen(!dropdownIndustryOpen);
                   }}
@@ -72,7 +79,7 @@ const OurSoftwares = () => {
                   {dropdownIndustryOpen &&
                     <div
                       ref={industrydropdownRef}
-                      className="absolute left-0 mt-12 bg-white rounded-md w-full hadow-xl z-50"
+                      className="absolute left-0 mt-6 lg:mt-12 bg-white rounded-md w-full hadow-xl z-50"
                     >
                       <button
                         onClick={() => handleSelectIndustry("All Industries")}
@@ -128,7 +135,7 @@ const OurSoftwares = () => {
               <div className="bg-gray-200 w-0.5" />
               <div className="w-full lg:w-1/2 ">
                 <div
-                  className="services-dropdown-button relative flex justify-between p-4 font-semibold  border-gray-200 lg:border-none border-r-2 pr-4 cursor-pointer"
+                  className="services-dropdown-button relative text-sm lg:text-base flex justify-between p-4 font-semibold  border-gray-200 lg:border-none border-r-2 pr-4 cursor-pointer"
                   onClick={() => {
                     setDropdownServicesOpen(!dropdownServicesOpen);
                   }}
@@ -138,7 +145,7 @@ const OurSoftwares = () => {
                   {dropdownServicesOpen &&
                     <div
                       ref={servicesdropdownRef}
-                      className="absolute left-0 mt-12 bg-white  w-full  rounded-md shadow-xl z-50"
+                      className="absolute left-0 mt-6 lg:mt-12 bg-white  w-full  rounded-md shadow-xl z-50"
                     >
                       <button
                         onClick={() => handleSelectServices("All Industries")}
@@ -211,12 +218,20 @@ const OurSoftwares = () => {
                 Web App
               </div>
             </div>
-            <Link target="blank" to="https://bcp-hhrms.onrender.com/">
-              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
-                Visit Website
-                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+            <div className="flex gap-4">
+              <div
+                onClick={handleOpenPopup}
+                className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
+              >
+                <FaShoppingCart />
               </div>
-            </Link>
+              <Link target="blank" to="https://bcp-hhrms.onrender.com/">
+                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
+                  Visit Website
+                  <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+                </div>
+              </Link>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 ">
             <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
@@ -259,15 +274,23 @@ const OurSoftwares = () => {
                 Desktop App
               </div>
             </div>
-            <Link
-              target="blank"
-              to="https://github.com/edillormark2/Library-Management-System"
-            >
-              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
-                View Case Study
-                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+            <div className="flex gap-4">
+              <div
+                onClick={handleOpenPopup}
+                className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
+              >
+                <FaShoppingCart />
               </div>
-            </Link>
+              <Link
+                target="blank"
+                to="https://github.com/edillormark2/Library-Management-System"
+              >
+                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                  View Case Study
+                  <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -293,15 +316,23 @@ const OurSoftwares = () => {
                 Web App
               </div>
             </div>
-            <Link
-              target="blank"
-              to="https://github.com/edillormark2/Todo-List-App"
-            >
-              <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
-                Visit Case Study
-                <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+            <div className="flex gap-4">
+              <div
+                onClick={handleOpenPopup}
+                className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
+              >
+                <FaShoppingCart />
               </div>
-            </Link>
+              <Link
+                target="blank"
+                to="https://github.com/edillormark2/Todo-List-App"
+              >
+                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                  Visit Case Study
+                  <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+                </div>
+              </Link>
+            </div>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
@@ -315,6 +346,10 @@ const OurSoftwares = () => {
         </div>
       </div>
       <Footer />
+      <BuySoftwarePopup
+        openCreatePopup={openCreatePopup}
+        setOpenCreatePopup={setOpenCreatePopup}
+      />
     </div>
   );
 };
