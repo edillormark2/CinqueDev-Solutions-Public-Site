@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import OurSoftwares from "./pages/OurSoftwares";
 import CustomSoftwarePlan from "./pages/CustomSoftwarePlan";
+import ScheduleConsultation from "./pages/ScheduleConsultation";
 
 const App = () => {
   return (
@@ -36,6 +37,10 @@ const App = () => {
               />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route
+                path="/schedule-a-free-consultation"
+                element={<ScheduleConsultation />}
+              />
             </Routes>
           </main>
         </div>

@@ -23,7 +23,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import BuySoftwarePopup from "../components/BuySoftwarePopup";
 import hhrms from "../assets/hhrms-pic.png";
-import lms from "../assets/lms-dashboard.png";
+import lms from "../assets/lmsapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {} from "react-router-dom";
 
@@ -97,6 +97,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col md:flex-row justify-center lg:justify-start mt-10 gap-4">
               <div
+                onClick={() => handleClick("/schedule-a-free-consultation")}
                 className={`mx-auto md:mx-0 flex items-center font-semibold cursor-pointer w-68 bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
               >
                 Schedule a Free Consultation

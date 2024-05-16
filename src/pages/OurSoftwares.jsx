@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import hhrms from "../assets/hhrms-pic.png";
-import lms from "../assets/lms-dashboard.png";
+import lms from "../assets/lmsapp.png";
 import todoapp from "../assets/todoapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../components/Footer";
