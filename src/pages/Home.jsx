@@ -117,7 +117,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div ref={secondPartRef} />
+        <div ref={secondPartRef} className="mb-20"/>
       </div>
       {/* Home page second part */}
       <div>
