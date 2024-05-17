@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-full">
           <div className="fixed bg-main-bg dark:bg-main-dark-bg navbar w-full">
             <DesktopNavbar />
           </div>

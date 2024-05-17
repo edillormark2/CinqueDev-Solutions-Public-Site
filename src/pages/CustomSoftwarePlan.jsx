@@ -77,7 +77,7 @@ const CustomSoftwarePlan = () => {
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative ">
         <div className="absolute top-40 flex w-full">
-          <div className="bg-white drop-shadow-2xl mx-4 lg:mx-36 rounded-xl w-full py-8 px-3 lg:px-12 mb-40">
+          <div className="bg-white drop-shadow-2xl mx-4 lg:mx-36 rounded-xl w-full py-8 px-3 lg:px-12 mb-36">
             <div className="">
               <p className="text-center text-2xl lg:text-5xl font-bold">
                 What would you like to do?

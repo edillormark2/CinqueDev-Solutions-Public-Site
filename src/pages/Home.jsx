@@ -277,7 +277,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="my-28 mx-4 lg:mx-10 xl:mx-40">
+        <div className="my-28 mx-2 lg:mx-10 xl:mx-40">
           <div className="mx-0 md:mx-10 mt-10 text-3xl xl:text-4xl font-bold text-center">
             Check out our latest work
           </div>

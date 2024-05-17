@@ -41,10 +41,10 @@ const ScheduleConsultation = () => {
   };
 
   return (
-    <div>
+    <div className="h-svh">
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative">
         <div className="absolute top-24 flex mx-2 ">
-          <div className="flex flex-col md:flex-row bg-white drop-shadow-2xl  rounded-xl py-6 px-3 lg:px-12 mb-40">
+          <div className="flex flex-col md:flex-row bg-white drop-shadow-2xl  rounded-xl py-6 px-3 lg:px-12">
             <div className="w-full md:w-2/5 mx-auto">
               <p className="text-3xl font-bold text-center mt-8">
                 Free Consultation
