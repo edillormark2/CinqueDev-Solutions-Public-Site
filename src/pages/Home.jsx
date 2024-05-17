@@ -19,11 +19,24 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiPhp, SiFirebase, SiMongodb } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoFigma } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+import BuySoftwarePopup from "../components/BuySoftwarePopup";
+import hhrms from "../assets/hhrms-pic.png";
+import lms from "../assets/lmsapp.png";
+import { FaArrowRightLong } from "react-icons/fa6";
+import {} from "react-router-dom";
 
 const Home = () => {
   const secondPartRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [shouldPause, setShouldPause] = useState(false);
+
+  const navigate = useNavigate();
+  const handleClick = path => {
+    navigate(path);
+    window.scrollTo({ top: 0 });
+  };
 
   const handleReadMoreClick = () => {
     if (secondPartRef.current) {
@@ -52,7 +65,7 @@ const Home = () => {
     () => {
       let timer;
       if (isHovered) {
-        timer = setTimeout(() => setShouldPause(true), 1000);
+        timer = setTimeout(() => setShouldPause(true), 900);
       } else {
         setShouldPause(false);
         if (timer) {
@@ -84,6 +97,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col md:flex-row justify-center lg:justify-start mt-10 gap-4">
               <div
+                onClick={() => handleClick("/schedule-a-free-consultation")}
                 className={`mx-auto md:mx-0 flex items-center font-semibold cursor-pointer w-68 bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
               >
                 Schedule a Free Consultation
@@ -260,6 +274,111 @@ const Home = () => {
                 </p>
               </div>
             )}
+          </div>
+        </div>
+
+        <div className="my-28 mx-4 lg:mx-10 xl:mx-40">
+          <div className="mx-0 md:mx-10 mt-10 text-3xl xl:text-4xl font-bold text-center">
+            Check out our latest work
+          </div>
+          <div className="flex justify-center mt-2 mb-2">
+            <div className="h-0.5 w-24 mx-auto lg:mx-0 bg-gradient-to-r from-cyan-300 to-blue-500 " />
+          </div>
+          <div className="mx-auto w-full md:w-1/2 text-base text-center mb-16 text-gray-600">
+            We grow businesses and individual through our impactful digital
+            solutions. to deliver a powerful and cheaper solutions without
+            mistakes and bugs.
+          </div>
+          <div className="flex flex-col lg:flex-row gap-0 lg:gap-16">
+            <div className="w-full lg:w-2/5 mt-4">
+              <p className="text-2xl font-semibold">
+                Hospital HR Management System
+              </p>
+              <p className="text-justify text-sm md:text-base tracking-wide leading-loose my-2 text-gray-500">
+                Specialized software solution tailored to meet the unique needs
+                of managing human resources within healthcare facilities such as
+                hospitals, clinics, and medical centers. It typically
+                encompasses various functions such as employee data management,
+                payroll processing, scheduling, performance evaluation, training
+                tracking, and compliance management.
+              </p>
+              <div className="flex gap-4 my-4">
+                <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                  Healthcare
+                </div>
+                <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                  Web App
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Link target="blank" to="https://bcp-hhrms.onrender.com/">
+                  <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
+                    Visit Website
+                    <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2 ">
+              <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
+                <img
+                  src={hhrms}
+                  className="object-cover w-full h-full rounded-xl cursor-pointer z-10"
+                  alt="Web image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-0 lg:gap-16 my-36">
+            <div className="w-full lg:w-1/2">
+              <div className="drop-shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-110">
+                <img
+                  src={lms}
+                  className="object-cover w-full h-full rounded-xl cursor-pointer"
+                  alt="Web image"
+                />
+              </div>
+            </div>
+            <div className="w-full lg:w-2/5 mt-4">
+              <p className="text-2xl font-semibold">
+                Library Management System (LMS)
+              </p>
+              <p className="text-justify text-sm md:text-base tracking-wide leading-loose my-2 text-gray-500">
+                A software solution designed to efficiently manage the
+                operations of a library. It encompasses a range of
+                functionalities including cataloging and organizing library
+                resources (such as books, journals, and multimedia), managing
+                member accounts, tracking borrowing and returning of items,
+                handling fines and fees, and generating reports on library usage
+                and inventory.
+              </p>
+              <div className="flex gap-4 my-4">
+                <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                  E-Learning
+                </div>
+                <div className="bg-gray-200 shadow-md bg-opacity-60 rounded-full p-1 text-xs text-blue-500 w-20 text-center cursor-default">
+                  Desktop App
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Link
+                  target="blank"
+                  to="https://github.com/edillormark2/Library-Management-System"
+                >
+                  <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                    View Case Study
+                    <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={() => handleClick("/services/ready-softwares")}
+            className="font-semibold text-blue-500 cursor-pointer hover:text-black text-center"
+          >
+            View more
           </div>
         </div>
       </div>

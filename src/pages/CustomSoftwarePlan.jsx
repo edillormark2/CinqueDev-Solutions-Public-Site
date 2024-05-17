@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import countryList from "react-select-country-list";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
-import Footer from "../components/Footer";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CustomSoftwarePlan = () => {
   const countriesData = countryList().getData();
@@ -44,6 +45,12 @@ const CustomSoftwarePlan = () => {
   const companydropdownRef = useRef(null);
   const countrydropdownRef = useRef(null);
 
+  const handleSubmit = () => {
+    toast.success(
+      "Your inquiry has been successfully submitted. We will respond to your email or phone within 8 hours."
+    );
+  };
+
   useEffect(() => {
     const handleOutsideClick = event => {
       if (
@@ -70,13 +77,13 @@ const CustomSoftwarePlan = () => {
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative ">
         <div className="absolute top-40 flex w-full">
-          <div className="bg-white drop-shadow-2xl mx-8 lg:mx-36 rounded-xl w-full py-8 px-4 lg:px-12 mb-40">
+          <div className="bg-white drop-shadow-2xl mx-4 lg:mx-36 rounded-xl w-full py-8 px-3 lg:px-12 mb-40">
             <div className="">
               <p className="text-center text-2xl lg:text-5xl font-bold">
                 What would you like to do?
               </p>
               <div className="h-0.5 w-20 flex mx-auto bg-gradient-to-r from-cyan-300 to-blue-500 my-6" />
-              <p className="mx-2 lg:mx-36 text-base lg:text-lg font-semibold text-gray-500 text-center">
+              <p className="mx-2 lg:mx-36 text-sm lg:text-lg font-semibold text-gray-500 text-center">
                 Tell us about your business goals and we will contact you. Feel
                 free to contact us if you need some help, consultation or you
                 have some other question.
@@ -85,7 +92,7 @@ const CustomSoftwarePlan = () => {
             <div className="mt-10">
               <div className="flex gap-2 lg:gap-8">
                 <div className="w-1/2">
-                  <h1 className="mb-1 dark:text-gray-200">Full Name</h1>
+                  <h1 className="mb-1 text-sm md:text-base">Full Name</h1>
                   <input
                     type="text"
                     id="name"
@@ -93,7 +100,7 @@ const CustomSoftwarePlan = () => {
                   />
                 </div>
                 <div className="w-1/2">
-                  <h1 className="mb-1 dark:text-gray-200">Email</h1>
+                  <h1 className="mb-1 text-sm md:text-base">Email</h1>
                   <input
                     type="email"
                     id="email"
@@ -103,7 +110,7 @@ const CustomSoftwarePlan = () => {
               </div>
               <div className="flex gap-2 lg:gap-8">
                 <div className="w-1/2">
-                  <h1 className="mb-1 dark:text-gray-200">Country</h1>
+                  <h1 className="mb-1 text-sm md:text-base">Country</h1>
                   <div className="mb-5 relative">
                     <input
                       type="text"
@@ -143,7 +150,9 @@ const CustomSoftwarePlan = () => {
                 </div>
 
                 <div className="w-1/2">
-                  <h1 className="mb-1 dark:text-gray-200">Estimated Budget</h1>
+                  <h1 className="mb-1 text-sm md:text-base">
+                    Estimated Budget
+                  </h1>
                   <div className="mb-5 relative ">
                     <div classname="box">
                       <button
@@ -153,7 +162,7 @@ const CustomSoftwarePlan = () => {
                         }}
                       >
                         <p className="flex justify-start">
-                          {selectedCompanySize || "Select your estimated"}
+                          {selectedCompanySize || "Select"}
                         </p>
                         <MdKeyboardArrowDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600" />
                       </button>
@@ -204,7 +213,7 @@ const CustomSoftwarePlan = () => {
             </div>
 
             <div className="mt-4">
-              <h1 className="mb-1 dark:text-gray-200">Message</h1>
+              <h1 className="mb-1 text-sm md:text-base">Message</h1>
               <textarea
                 id="message"
                 className="form-control-1 w-full bg-white p-3 rounded-lg border  text-sm sm:text-base 0 mb-5"
@@ -255,20 +264,22 @@ const CustomSoftwarePlan = () => {
                 </label>
               </div>
             </div>
-            <div className="text-sm text-gray-400 my-8">
+            <div className="text-xs md:text-sm text-justify md:text-center text-gray-400 my-8">
               Your personal data will be processed in order to handle your
               question. Other information regarding the processing of personal
               data, including information on your rights, can be found in our
               Privacy Policy. By submitting this form, You acknowledge receipt
               of the Cinquedev's Privacy Policy
             </div>
-            <div className="w-60 mx-auto mt-8 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70">
+            <div
+              onClick={handleSubmit}
+              className="w-60 mx-auto mt-8 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
+            >
               Submit <IoIosSend size={22} className="ml-2 " />
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io";
 import simplifiedlogo from "../assets/cds-simplified-logo.png";
 import { Divider } from "@mui/joy";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const navigate = useNavigate();

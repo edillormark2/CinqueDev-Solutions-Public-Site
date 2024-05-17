@@ -7,9 +7,16 @@ import performance from "../assets/performance.png";
 import adaptability from "../assets/adaptability.png";
 import { FaCheck } from "react-icons/fa";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleClick = path => {
+    navigate(path);
+    window.scrollTo({ top: 0 });
+  };
+
   return (
     <div className="flex flex-col mt-10 justify-center w-full items-center">
       {/*First Part */}
@@ -64,11 +71,13 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <Link to="/services/custom-software-plan">
-            <div className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 ">
-              Select Plan
-            </div>
-          </Link>
+
+          <div
+            className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 "
+            onClick={() => handleClick("/services/custom-software-plan")}
+          >
+            Select Plan
+          </div>
         </div>
         <div className="flex flex-col p-4 bg-white border hover:border-primary rounded-lg drop-shadow-xl w-full lg:w-2/5 overflow-hidden transform transition-transform hover:scale-105">
           <p className="flex justify-center text-xl md:text-2xl font-bold">
@@ -117,14 +126,12 @@ const Services = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row m-4 gap-2 xl:gap-4 ">
-            <div className="p-2 w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center ">
+            <div
+              onClick={() => handleClick("/services/ready-softwares")}
+              className="p-2 w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center "
+            >
               Select Plan
             </div>
-            <Link to="/services/ready-softwares">
-              <div className="w-40 p-2  text-sm text-center font-semibold rounded-full text-gray-600 border border-gray-300 flex justify-center  cursor-pointer bg-gray-200 hover:bg-gray-300">
-                View Our Softwares
-              </div>
-            </Link>
           </div>
         </div>
       </div>
