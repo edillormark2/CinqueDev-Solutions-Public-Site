@@ -148,7 +148,7 @@ const OurSoftwares = () => {
                       className="absolute left-0 mt-6 lg:mt-12 bg-white  w-full  rounded-md shadow-xl z-50"
                     >
                       <button
-                        onClick={() => handleSelectServices("All Industries")}
+                        onClick={() => handleSelectServices("All Services")}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left "
                       >
                         All Services
