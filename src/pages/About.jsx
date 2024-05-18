@@ -318,19 +318,19 @@ const About = () => {
               <div className="flex justify-center">
                 <div className="h-0.5 w-24 flex mx-auto lg:mx-0 bg-white my-4" />
               </div>
-              <p className="text-white text-lg my-2 text-center">
+              <p className="text-white text-base md:text-lg my-2 text-center">
                 To offer impactful and transformative solutions that propel
                 businesses forward and enhance the lives of individuals through
                 meaningful innovation.
               </p>
-              <div className="flex flex-col md:flex-row justify-center gap-4 mt-20 mx-10">
-                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
+              <div className="flex flex-col md:flex-row justify-center gap-4 mt-20 mx-14 md:mx-10">
+                <div className="bg-white bg-opacity-60 py-2 px-0 md:px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
                   BUILD
                 </div>
-                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
+                <div className="bg-white bg-opacity-60 py-2 px-0 md:px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
                   INNOVATE
                 </div>
-                <div className="bg-white bg-opacity-60 py-2 px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
+                <div className="bg-white bg-opacity-60 py-2 px-0 md:px-4 rounded-full font-semibold text-xl text-gray-700 drop-shadow-lg text-center">
                   SUCCEED
                 </div>
               </div>

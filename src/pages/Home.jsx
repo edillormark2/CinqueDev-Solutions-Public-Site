@@ -103,7 +103,7 @@ const Home = () => {
                 Schedule a Free Consultation
               </div>
               <div
-                className="mx-auto md:mx-0 max-w-32 py-2 px-4 bg-white rounded-full drop-shadow-lg cursor-pointer hover:bg-blue-50 font-semibold text-gray-500"
+                className="mx-auto md:mx-0 max-w-32 py-2 px-4 bg-white rounded-full drop-shadow-lg cursor-pointer hover:bg-blue-50 font-semibold text-gray-500 text-center"
                 onClick={handleReadMoreClick}
               >
                 Read more
@@ -117,7 +117,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div ref={secondPartRef} />
+        <div ref={secondPartRef} className="mb-20" />
       </div>
       {/* Home page second part */}
       <div>
@@ -277,7 +277,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="my-28 mx-4 lg:mx-10 xl:mx-40">
+        <div className="my-28 mx-2 lg:mx-10 xl:mx-40">
           <div className="mx-0 md:mx-10 mt-10 text-3xl xl:text-4xl font-bold text-center">
             Check out our latest work
           </div>

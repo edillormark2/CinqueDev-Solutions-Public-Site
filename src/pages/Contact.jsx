@@ -9,6 +9,8 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { PiBuildingsBold } from "react-icons/pi";
 import Footer from "../components/Footer";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const countriesData = countryList().getData();
@@ -19,6 +21,10 @@ const Contact = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [searchedCountry, setSearchedCountry] = useState("");
   const [filteredCountries, setFilteredCountries] = useState([]);
+
+  const handleSubmit = () => {
+    toast.success("Thank you for contacting us! We will be in touch shortly.");
+  };
 
   const handleSelectCompanySize = size => {
     setSelectedCompanySize(size);
@@ -265,7 +271,10 @@ const Contact = () => {
                 Cinquedev's Privacy Policy
               </div>
 
-              <div className="w-full mt-2 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70">
+              <div
+                onClick={handleSubmit}
+                className="w-full mt-2 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
+              >
                 Submit <IoIosSend size={22} className="ml-2 " />
               </div>
             </div>

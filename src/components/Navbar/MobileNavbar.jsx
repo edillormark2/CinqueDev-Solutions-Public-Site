@@ -20,6 +20,7 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
   const handleNavLinkClick = link => {
     setCurrentPath(link);
     navigate(link);
+    window.scrollTo({ top: 0 });
     setShowMenu(false);
   };
 

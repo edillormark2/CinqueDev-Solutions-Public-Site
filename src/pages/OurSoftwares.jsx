@@ -135,7 +135,7 @@ const OurSoftwares = () => {
               <div className="bg-gray-200 w-0.5" />
               <div className="w-full lg:w-1/2 ">
                 <div
-                  className="services-dropdown-button relative text-sm lg:text-base flex justify-between p-4 font-semibold  border-gray-200 lg:border-none border-r-2 pr-4 cursor-pointer"
+                  className="services-dropdown-button relative text-sm lg:text-base flex justify-between p-4 font-semibold  cursor-pointer"
                   onClick={() => {
                     setDropdownServicesOpen(!dropdownServicesOpen);
                   }}
@@ -148,7 +148,7 @@ const OurSoftwares = () => {
                       className="absolute left-0 mt-6 lg:mt-12 bg-white  w-full  rounded-md shadow-xl z-50"
                     >
                       <button
-                        onClick={() => handleSelectServices("All Industries")}
+                        onClick={() => handleSelectServices("All Services")}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left "
                       >
                         All Services
