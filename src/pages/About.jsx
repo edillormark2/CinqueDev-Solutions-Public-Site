@@ -232,7 +232,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   1
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Plan</p>
                   <p>
                     Define the scope and objectives of the project or the
@@ -245,7 +245,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   2
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Design</p>
                   <p>
                     Create the architecture and design for the features to be
@@ -258,7 +258,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   3
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Develop</p>
                   <p>
                     Write the code to implement the planned features and
@@ -271,7 +271,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   4
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Test</p>
                   <p>
                     Verify that the code works as intended and meets the
@@ -284,7 +284,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   5
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Deploy</p>
                   <p>
                     Release the developed and tested features to a production or
@@ -296,7 +296,7 @@ const About = () => {
                 <div className="bg-primary rounded-full min-w-12 max-w-14 h-12 items-center justify-center shadow-lg text-3xl text-white text-center font-bold p-2 overflow-hidden transform transition-transform hover:scale-110 cursor-pointer hover:shadow-primary">
                   6
                 </div>
-                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:border group-hover:border-gray-500 p-3 rounded-md">
+                <div className="mx-4 md:mx-8 text-slate-400 group-hover:text-slate-700 group-hover:outline outline-1 group-hover:outline-gray-500 p-3 rounded-md">
                   <p className="font-semibold text-xl">Review</p>
                   <p>
                     Assess the completed work and identify areas for
