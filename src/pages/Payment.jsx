@@ -117,27 +117,29 @@ const Payment = () => {
             <Divider />
             <div className="my-4">
               <p className="text-xl mb-8">Payment Information</p>{" "}
-              <div className="flex gap-2 mx-auto my-4">
-                <img
-                  src={visa}
-                  className="w-24 h-12 object-contain border rounded-md"
-                />
-                <img
-                  src={mc}
-                  className="w-24 h-12 object-contain  border rounded-md"
-                />
-                <img
-                  src={ucb}
-                  className="w-24 h-12 object-contain border rounded-md"
-                />
-                <img
-                  src={ae}
-                  className="w-24 h-12 object-contain border rounded-md"
-                />
-                <img
-                  src={pp}
-                  className="w-24 h-12 object-contain  border rounded-md"
-                />
+              <div >
+                <div className="flex gap-2 mx-auto my-4 overflow-auto">
+                  <img
+                    src={visa}
+                    className="w-24 h-12 object-contain border rounded-md"
+                  />
+                  <img
+                    src={mc}
+                    className="w-24 h-12 object-contain  border rounded-md"
+                  />
+                  <img
+                    src={ucb}
+                    className="w-24 h-12 object-contain border rounded-md"
+                  />
+                  <img
+                    src={ae}
+                    className="w-24 h-12 object-contain border rounded-md"
+                  />
+                  <img
+                    src={pp}
+                    className="w-24 h-12 object-contain  border rounded-md"
+                  />
+                </div>
               </div>
               <div className="flex gap-2 lg:gap-8">
                 <div className="w-1/2">
