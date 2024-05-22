@@ -9,13 +9,21 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import BuySoftwarePopup from "../components/BuySoftwarePopup";
+import { useNavigate } from "react-router-dom";
 
 const OurSoftwares = () => {
   const [dropdownIndustryOpen, setDropdownIndustryOpen] = useState(false);
   const [dropdownServicesOpen, setDropdownServicesOpen] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState("");
   const [selectedServices, setSelectedServices] = useState("");
-  const [openCreatePopup, setOpenCreatePopup] = useState(false);
+  const navigate = useNavigate();
+
+  const handlePaymentClick = id => {
+    navigate(`/services/ready-softwares/payment/${id}`);
+    window.scrollTo({
+      top: 0
+    });
+  };
 
   const handleSelectIndustry = size => {
     setSelectedIndustry(size);
@@ -51,10 +59,6 @@ const OurSoftwares = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  const handleOpenPopup = () => {
-    setOpenCreatePopup(true);
-  };
 
   return (
     <div>
@@ -220,11 +224,12 @@ const OurSoftwares = () => {
             </div>
             <div className="flex gap-4">
               <div
-                onClick={handleOpenPopup}
+                onClick={() => handlePaymentClick(1)}
                 className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
               >
                 <FaShoppingCart />
               </div>
+
               <Link target="blank" to="https://bcp-hhrms.onrender.com/">
                 <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
                   Visit Website
@@ -276,7 +281,7 @@ const OurSoftwares = () => {
             </div>
             <div className="flex gap-4">
               <div
-                onClick={handleOpenPopup}
+                onClick={() => handlePaymentClick(2)}
                 className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
               >
                 <FaShoppingCart />
@@ -318,7 +323,7 @@ const OurSoftwares = () => {
             </div>
             <div className="flex gap-4">
               <div
-                onClick={handleOpenPopup}
+                onClick={() => handlePaymentClick(3)}
                 className="bg-blue-500  text-white rounded-full p-3 drop-shadow-md self-center cursor-pointer transition-transform transform hover:scale-110 hover:bg-primary shadow-lg hover:shadow-primary "
               >
                 <FaShoppingCart />
@@ -346,10 +351,6 @@ const OurSoftwares = () => {
         </div>
       </div>
       <Footer />
-      <BuySoftwarePopup
-        openCreatePopup={openCreatePopup}
-        setOpenCreatePopup={setOpenCreatePopup}
-      />
     </div>
   );
 };

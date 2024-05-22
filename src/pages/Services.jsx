@@ -54,7 +54,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex items-center gap-4 my-3">
-                <div className="p-2 bg-green-100 rounded-full border ">
+                <div className="p-2 bg-green-100 rounded-full ">
                   <FaCheck className="text-green-500" />
                 </div>
                 <p className="text-base md:text-lg font-semibold text-gray-500">
@@ -62,7 +62,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex items-center gap-4 my-3">
-                <div className="p-2 bg-green-100 rounded-full border ">
+                <div className="p-2 bg-green-100 rounded-full">
                   <FaCheck className="text-green-500" />
                 </div>
                 <p className="text-base md:text-lg font-semibold text-gray-500">

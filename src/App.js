@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import OurSoftwares from "./pages/OurSoftwares";
 import CustomSoftwarePlan from "./pages/CustomSoftwarePlan";
 import ScheduleConsultation from "./pages/ScheduleConsultation";
+import Payment from "./pages/Payment";
 
 const App = () => {
   return (
@@ -34,6 +35,10 @@ const App = () => {
               <Route
                 path="/services/ready-softwares"
                 element={<OurSoftwares />}
+              />
+              <Route
+                path="/services/ready-softwares/payment/:id"
+                element={<Payment />}
               />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
