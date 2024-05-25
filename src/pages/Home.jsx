@@ -32,6 +32,7 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [shouldPause, setShouldPause] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [isAppInstalled, setIsAppInstalled] = useState(false);
 
   const navigate = useNavigate();
   const handleClick = path => {
@@ -63,27 +64,46 @@ const Home = () => {
     { icon: <FaJs size={40} className="mx-auto" />, name: "JavaScript" }
   ];
 
-  const handleInstallClick = () => {
+  const handleInstallClick = async () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(choiceResult => {
-        if (choiceResult.outcome === "accepted") {
-          console.log("User accepted the A2HS prompt");
-        } else {
-          console.log("User dismissed the A2HS prompt");
-        }
-        setDeferredPrompt(null);
-      });
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        localStorage.setItem("appInstalled", "true");
+        setIsAppInstalled(true);
+      }
+      setDeferredPrompt(null);
     }
   };
 
+  const checkIfAppInstalled = () => {
+    const isInstalled =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone;
+    localStorage.setItem("appInstalled", isInstalled ? "true" : "false");
+    setIsAppInstalled(isInstalled);
+  };
+
+  useEffect(() => {
+    checkIfAppInstalled();
+
+    const handleBeforeInstallPrompt = e => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+    };
+  }, []);
+
   useEffect(
     () => {
-      window.addEventListener("beforeinstallprompt", e => {
-        e.preventDefault();
-        setDeferredPrompt(e);
-      });
-
       let timer;
       if (isHovered) {
         timer = setTimeout(() => setShouldPause(true), 900);
@@ -123,12 +143,13 @@ const Home = () => {
               >
                 Schedule a Free Consultation
               </div>
-              <div
-                onClick={handleInstallClick}
-                className="mx-auto md:mx-0 max-w-44 py-2 px-4 bg-white rounded-full drop-shadow-lg cursor-pointer hover:bg-blue-50 font-semibold text-gray-500 text-center"
-              >
-                Install mobile app
-              </div>
+              {!isAppInstalled &&
+                <div
+                  onClick={handleInstallClick}
+                  className="mx-auto md:mx-0 max-w-44 py-2 px-4 bg-white rounded-full drop-shadow-lg cursor-pointer hover:bg-blue-50 font-semibold text-gray-500 text-center"
+                >
+                  Install mobile app
+                </div>}
             </div>
           </div>
           <div className="w-full lg:w-1/2">
