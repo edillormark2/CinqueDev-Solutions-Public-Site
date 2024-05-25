@@ -76,7 +76,7 @@ const CustomSoftwarePlan = () => {
   return (
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative ">
-        <div className="absolute top-40 flex w-full">
+        <div className="absolute top-24 flex w-full">
           <div className="bg-white drop-shadow-2xl mx-4 lg:mx-36 rounded-xl w-full py-8 px-3 lg:px-12 mb-36">
             <div className="">
               <p className="text-center text-2xl lg:text-5xl font-bold">
@@ -273,7 +273,7 @@ const CustomSoftwarePlan = () => {
             </div>
             <div
               onClick={handleSubmit}
-              className="w-60 mx-auto mt-8 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
+              className="w-60 select-none mx-auto mt-8 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
             >
               Submit <IoIosSend size={22} className="ml-2 " />
             </div>

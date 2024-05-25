@@ -142,7 +142,7 @@ const DesktopNavbar = () => {
           <div className="hidden md:block">
             <div
               onClick={() => handleClick("/schedule-a-free-consultation")}
-              className={`flex items-center cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
+              className={`flex select-none items-center cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
             >
               Book a call
               <MdCallMade className="ml-2" />

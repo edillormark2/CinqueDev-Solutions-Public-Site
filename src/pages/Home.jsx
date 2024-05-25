@@ -26,6 +26,7 @@ import hhrms from "../assets/hhrms-pic.png";
 import lms from "../assets/lmsapp.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {} from "react-router-dom";
+import { MdInstallMobile } from "react-icons/md";
 
 const Home = () => {
   const secondPartRef = useRef(null);
@@ -134,16 +135,17 @@ const Home = () => {
             <div className="flex flex-col md:flex-row justify-center lg:justify-start mt-10 gap-4">
               <div
                 onClick={() => handleClick("/schedule-a-free-consultation")}
-                className={`mx-auto md:mx-0 flex items-center font-semibold cursor-pointer w-68 bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
+                className={`mx-auto md:mx-0  select-none flex items-center font-semibold cursor-pointer w-68 bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-70 text-white py-2 px-4 rounded-full dark:text-black`}
               >
                 Schedule a Free Consultation
               </div>
               {!isAppInstalled &&
                 <div
                   onClick={handleInstallClick}
-                  className="mx-auto md:mx-0 max-w-44 py-2 px-4 bg-white rounded-full drop-shadow-lg cursor-pointer hover:bg-blue-50 font-semibold text-gray-500 text-center"
+                  className="flex gap-2 mx-auto md:mx-0 max-w-60 py-2 px-4 bg-white rounded-full cursor-pointer border border-gray-300  hover:shadow-xl font-semibold text-gray-500 text-center select-none"
                 >
-                  Install mobile app
+                  Install app now
+                  <MdInstallMobile size={20} className="self-center" />
                 </div>}
             </div>
           </div>

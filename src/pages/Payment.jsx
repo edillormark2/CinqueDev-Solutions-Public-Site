@@ -87,7 +87,7 @@ const Payment = () => {
   return (
     <div>
       <div className="bg-gradient-to-l from-cyan-400 from-20% via-sky-400 via-30% to-blue-600 to-80% w-full h-96 flex justify-center items-center relative">
-        <div className="absolute top-40 flex w-full">
+        <div className="absolute top-24 flex w-full">
           <div className="bg-white drop-shadow-2xl mx-4 lg:mx-56 rounded-xl w-full py-8 px-3 lg:px-12 mb-36">
             <p className="text-center text-2xl lg:text-4xl font-bold mb-8">
               Get This Software Now!
@@ -117,7 +117,7 @@ const Payment = () => {
             <Divider />
             <div className="my-4">
               <p className="text-xl mb-8">Payment Information</p>{" "}
-              <div >
+              <div>
                 <div className="flex gap-2 mx-auto my-4 overflow-auto">
                   <img
                     src={visa}
@@ -243,7 +243,7 @@ const Payment = () => {
               </div>
               <div
                 onClick={handleSubmit}
-                className="w-full mx-auto mt-8 bg-green-500 text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
+                className="select-none w-full mx-auto mt-8 bg-green-500 text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
               >
                 Place Order
               </div>

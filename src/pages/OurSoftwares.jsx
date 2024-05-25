@@ -231,7 +231,7 @@ const OurSoftwares = () => {
               </div>
 
               <Link target="blank" to="https://bcp-hhrms.onrender.com/">
-                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
+                <div className="flex select-none gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-40 text-center group ">
                   Visit Website
                   <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
                 </div>
@@ -290,7 +290,7 @@ const OurSoftwares = () => {
                 target="blank"
                 to="https://github.com/edillormark2/Library-Management-System"
               >
-                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                <div className="flex select-none gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
                   View Case Study
                   <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
                 </div>
@@ -332,7 +332,7 @@ const OurSoftwares = () => {
                 target="blank"
                 to="https://github.com/edillormark2/Todo-List-App"
               >
-                <div className="flex gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
+                <div className="flex select-none gap-4 my-8 cursor-pointer text-blue-500 font-semibold p-2 bg-white rounded-full w-48 text-center group ">
                   Visit Case Study
                   <FaArrowRightLong className="self-center transition-transform group-hover:translate-x-2 translate-x-0" />
                 </div>

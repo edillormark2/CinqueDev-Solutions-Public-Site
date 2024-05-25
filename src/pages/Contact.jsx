@@ -273,7 +273,7 @@ const Contact = () => {
 
               <div
                 onClick={handleSubmit}
-                className="w-full mt-2 bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
+                className="w-full mt-2 select-none bg-primary text-white p-3 rounded-full items-center flex justify-center font-semibold text-base cursor-pointer  hover:opacity-70"
               >
                 Submit <IoIosSend size={22} className="ml-2 " />
               </div>

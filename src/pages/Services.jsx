@@ -73,7 +73,7 @@ const Services = () => {
           </div>
 
           <div
-            className="p-2  rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 "
+            className="p-2 select-none rounded-full text-sm font-semibold text-white flex justify-center m-4 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 "
             onClick={() => handleClick("/services/custom-software-plan")}
           >
             Select Plan
@@ -128,7 +128,7 @@ const Services = () => {
           <div className="flex flex-col md:flex-row m-4 gap-2 xl:gap-4 ">
             <div
               onClick={() => handleClick("/services/ready-softwares")}
-              className="p-2 w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center "
+              className="p-2 select-none w-full text-sm font-semibold rounded-full text-white flex justify-center  cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 hover:opacity-85 items-center "
             >
               Select Plan
             </div>

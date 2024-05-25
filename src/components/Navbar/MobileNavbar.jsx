@@ -61,7 +61,7 @@ const MobileNavbar = ({ showMenu, setShowMenu, menuDropdownRef }) => {
         </nav>
 
         <div
-          className="flex items-center justify-center  mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-0 md:px-4 py-2 rounded-full text-white hover:opacity-80"
+          className="flex select-none items-center justify-center  mt-10 cursor-pointer bg-gradient-to-r from-cyan-300 to-blue-500 px-0 md:px-4 py-2 rounded-full text-white hover:opacity-80"
           onClick={() => handleClick("/schedule-a-free-consultation")}
         >
           Book a call
