@@ -64,32 +64,15 @@ const Home = () => {
     { icon: <FaJs size={40} className="mx-auto" />, name: "JavaScript" }
   ];
 
-  const handleInstallClick = async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === "accepted") {
-        localStorage.setItem("appInstalled", "true");
-        setIsAppInstalled(true);
-      }
-      setDeferredPrompt(null);
-    }
-  };
-
-  const checkIfAppInstalled = () => {
-    const isInstalled =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      window.navigator.standalone;
-    localStorage.setItem("appInstalled", isInstalled ? "true" : "false");
-    setIsAppInstalled(isInstalled);
-  };
-
   useEffect(() => {
-    checkIfAppInstalled();
+    const appInstalled = localStorage.getItem("appInstalled") === "true";
+    setIsAppInstalled(appInstalled);
 
     const handleBeforeInstallPrompt = e => {
       e.preventDefault();
       setDeferredPrompt(e);
+      setIsAppInstalled(false);
+      localStorage.setItem("appInstalled", "false");
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
@@ -101,6 +84,18 @@ const Home = () => {
       );
     };
   }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        localStorage.setItem("appInstalled", "true");
+        setIsAppInstalled(true);
+      }
+      setDeferredPrompt(null);
+    }
+  };
 
   useEffect(
     () => {
