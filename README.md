@@ -49,6 +49,8 @@ Cinquedev Solutions offers a website and mobile app designed to transform how bu
 
 - **React.js:** A JavaScript library for building user interfaces
 - **Tailwind CSS:** A utility-first CSS framework for rapid UI development
+- **IDE:** Visual Studio Code.
+- **Version Control:** GitHub for efficient version control.
   
 ## Deployment
 
